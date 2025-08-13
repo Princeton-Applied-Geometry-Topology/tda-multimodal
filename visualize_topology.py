@@ -9,6 +9,188 @@ import ripser
 import persim
 
 
+def farthest_point_sampling(data, n_samples, distance_metric='euclidean'):
+    """
+    Implements Farthest Point Sampling to preserve topological structure.
+    
+    Args:
+        data (np.ndarray): Input data points, shape (n_points, n_features)
+        n_samples (int): Number of points to sample
+        distance_metric (str): 'euclidean' or 'cosine'
+        
+    Returns:
+        np.ndarray: Indices of sampled points
+    """
+    n_points = data.shape[0]
+    
+    if n_samples >= n_points:
+        return np.arange(n_points)
+    
+    if distance_metric == 'cosine':
+        # Ensure data is float32 for numerical stability
+        if data.dtype != np.float32:
+            data = data.astype(np.float32)
+            
+        # Normalize to unit vectors for cosine distance
+        # Handle edge cases where norms might be very small or zero
+        norms = np.linalg.norm(data, axis=1, keepdims=True)
+        
+        # Check for problematic cases
+        zero_norms = norms < 1e-10
+        if np.any(zero_norms):
+            print(f"Warning: {np.sum(zero_norms)} points have near-zero norms. These will be handled specially.")
+            # For zero-norm points, use a small random vector to avoid division issues
+            data_normalized = data.copy()
+            data_normalized[zero_norms.flatten()] = np.random.normal(0, 1e-6, size=(np.sum(zero_norms), data.shape[1]))
+            norms[zero_norms] = np.linalg.norm(data_normalized[zero_norms.flatten()], axis=1, keepdims=True)
+        else:
+            data_normalized = data.copy()
+        
+        # Normalize with robust division
+        data_normalized = data_normalized / (norms + 1e-12)
+        
+        # Initialize with a random point
+        indices = np.zeros(n_samples, dtype=int)
+        indices[0] = np.random.randint(0, n_points)
+        
+        # Compute cosine distances (1 - cosine similarity)
+        distances = 1 - np.dot(data_normalized, data_normalized[indices[0]])
+        
+        # Iteratively select farthest points
+        for i in range(1, n_samples):
+            farthest_idx = np.argmax(distances)
+            indices[i] = farthest_idx
+            
+            # Update distances
+            new_distances = 1 - np.dot(data_normalized, data_normalized[farthest_idx])
+            distances = np.minimum(distances, new_distances)
+            
+    else:  # euclidean
+        # Normalize data to prevent numerical overflow
+        data_normalized = (data - np.mean(data, axis=0)) / (np.std(data, axis=0) + 1e-8)
+        
+        # Initialize with a random point
+        indices = np.zeros(n_samples, dtype=int)
+        indices[0] = np.random.randint(0, n_points)
+        
+        # Compute distances using more stable computation
+        distances = np.sum((data_normalized - data_normalized[indices[0]])**2, axis=1)
+        
+        # Iteratively select farthest points
+        for i in range(1, n_samples):
+            farthest_idx = np.argmax(distances)
+            indices[i] = farthest_idx
+            
+            # Update distances
+            new_distances = np.sum((data_normalized - data_normalized[farthest_idx])**2, axis=1)
+            distances = np.minimum(distances, new_distances)
+    
+    return indices
+
+
+def uniform_subsampling(data, n_samples):
+    """
+    Simple uniform subsampling that's guaranteed to work with any data.
+    
+    Args:
+        data (np.ndarray): Input data
+        n_samples (int): Number of samples to keep
+        
+    Returns:
+        np.ndarray: Subsampled data
+    """
+    n_points = data.shape[0]
+    if n_samples >= n_points:
+        return data
+    
+    # Use uniform spacing to ensure good coverage
+    step = n_points / n_samples
+    indices = np.array([int(i * step) for i in range(n_samples)])
+    return data[indices]
+
+
+def subsample_data(data, n_samples, method='fps', distance_metric='cosine'):
+    """
+    Subsample data using the specified method.
+    
+    Args:
+        data (np.ndarray): Input data
+        n_samples (int): Number of samples to keep
+        method (str): 'fps' for Farthest Point Sampling, 'random' for random sampling, 'robust' for FPS with fallback, 'uniform' for uniform spacing
+        distance_metric (str): 'euclidean' or 'cosine' (only used with FPS)
+        
+    Returns:
+        np.ndarray: Subsampled data
+    """
+    if data.shape[0] <= n_samples:
+        return data
+    
+    if method == 'fps':
+        try:
+            print(f"Using Farthest Point Sampling with {distance_metric} distance to subsample from {data.shape[0]} to {n_samples} points...")
+            indices = farthest_point_sampling(data, n_samples, distance_metric=distance_metric)
+        except Exception as e:
+            print(f"FPS failed with error: {e}. Falling back to random sampling.")
+            indices = np.random.choice(data.shape[0], n_samples, replace=False)
+            
+    elif method == 'robust':
+        try:
+            print(f"Attempting Farthest Point Sampling with {distance_metric} distance...")
+            indices = farthest_point_sampling(data, n_samples, distance_metric=distance_metric)
+        except Exception as e:
+            print(f"FPS failed, falling back to uniform sampling: {e}")
+            return uniform_subsampling(data, n_samples)
+            
+    elif method == 'uniform':
+        print(f"Using uniform subsampling to subsample from {data.shape[0]} to {n_samples} points...")
+        return uniform_subsampling(data, n_samples)
+        
+    elif method == 'random':
+        print(f"Using random sampling to subsample from {data.shape[0]} to {n_samples} points...")
+        indices = np.random.choice(data.shape[0], n_samples, replace=False)
+    else:
+        raise ValueError(f"Unknown subsampling method: {method}")
+    
+    return data[indices]
+
+
+def preprocess_activations(data):
+    """
+    Preprocess activations to handle extreme values and ensure numerical stability.
+    
+    Args:
+        data (np.ndarray): Raw activation data
+        
+    Returns:
+        np.ndarray: Preprocessed data
+    """
+    print(f"Preprocessing activations: shape {data.shape}, dtype {data.dtype}")
+    
+    # Convert float16 to float32 for better numerical stability
+    if data.dtype == np.float16:
+        print("Converting float16 to float32 for better numerical stability...")
+        data = data.astype(np.float32)
+    
+    # Check for extreme values
+    if np.isfinite(data).all():
+        print("All values are finite ✓")
+    else:
+        print(f"Warning: {np.sum(~np.isfinite(data))} non-finite values found. Replacing with zeros.")
+        data = np.where(np.isfinite(data), data, 0.0)
+    
+    # Check for extreme magnitudes
+    abs_data = np.abs(data)
+    max_val = np.max(abs_data)
+    min_val = np.min(abs_data)
+    print(f"Value range: [{min_val:.2e}, {max_val:.2e}]")
+    
+    # If values are extremely large, consider clipping or scaling
+    if max_val > 1e6:
+        print(f"Warning: Very large values detected (max: {max_val:.2e}). Consider using cosine distance.")
+    
+    return data
+
+
 def plot_persistence_diagram(diagrams, output_path):
     """
     Generates and saves a persistence diagram plot.
@@ -88,6 +270,20 @@ def main():
         default=5000,
         help="Maximum number of points to subsample from the data for TDA. Default is 5000."
     )
+    parser.add_argument(
+        '--subsample_method',
+        type=str,
+        choices=['fps', 'random', 'robust', 'uniform'],
+        default='robust',
+        help="Subsampling method: 'fps' (Farthest Point Sampling), 'random', 'robust' (FPS with fallback), or 'uniform' (guaranteed uniform). Default is 'robust' for reliability."
+    )
+    parser.add_argument(
+        '--distance_metric',
+        type=str,
+        choices=['cosine', 'euclidean'],
+        default='cosine',
+        help="Distance metric for FPS: 'cosine' (recommended for embeddings) or 'euclidean'. Default is 'cosine'."
+    )
     
     args = parser.parse_args()
 
@@ -121,11 +317,12 @@ def main():
         print("No input file provided.")
         data = generate_noisy_circle()
 
+    # Preprocess activations to handle extreme values
+    data = preprocess_activations(data)
+
     # Subsample the data to make computation tractable
     if args.max_points and data.shape[0] > args.max_points:
-        print(f"Data has {data.shape[0]} points. Subsampling to {args.max_points} points.")
-        indices = np.random.choice(data.shape[0], args.max_points, replace=False)
-        data = data[indices]
+        data = subsample_data(data, args.max_points, method=args.subsample_method, distance_metric=args.distance_metric)
 
     print(f"Data shape for analysis: {data.shape}")
 
