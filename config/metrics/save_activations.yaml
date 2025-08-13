@@ -1,4 +1,4 @@
 # config/metrics/save_activations.yaml
 enabled: true
 layers:
-  - 'layer_11' 
+  - 'layer-0' 

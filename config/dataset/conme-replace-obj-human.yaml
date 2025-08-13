@@ -1,0 +1,22 @@
+defaults:
+  - default
+
+_target_: dataset.conme.ConMeDataset
+
+dataset_name: conme
+task_name: conme_replace_obj_human
+
+data_root: /scratch/gpfs/nb0564/tda-multimodal/datasets/ConMe
+csv_path: ${dataset.data_root}/replace-obj_HUMAN_FILTER.csv
+images_dir: ${dataset.data_root}/images
+
+tokenizer: ${model.tokenizer}
+
+batch_size: 8
+seq_len: 256
+n_seqs: 500
+max_tokens: 512
+shuffle: False
+
+prompt_template: "Question: {question}\nOptions: {options}\nAnswer:"
+use_images: true 

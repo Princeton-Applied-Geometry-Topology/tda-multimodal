@@ -4,4 +4,5 @@ defaults:
   - full_sequence_ed@metrics.full_sequence_ed
   - full_sequence_id@metrics.full_sequence_id
   - accuracy@metrics.accuracy
+  - save_activations@metrics.save_activations
   - _self_
