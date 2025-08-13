@@ -1,0 +1,20 @@
+defaults:
+  - default
+
+_target_: model.pythia.Pythia
+base_model_name: 'pythia-6.9b-deduped'  # Base name of the Pythia model
+checkpoint_number: '143000'  # Checkpoint step number
+cache_dir: '/scratch/gpfs/kg4280/.cache/huggingface/hub' # Optional: Specify cache dir for model/tokenizer
+model_name: ${model.base_model_name}_step${model.checkpoint_number}
+
+# model_name is automatically constructed in Pythia.__init__ as {base_model_name}_step{checkpoint_number}
+# Example: pythia-6.9b-deduped_step143000
+
+# Tokenizer configuration - uses the same base model and revision
+tokenizer:
+  _target_: transformers.AutoTokenizer.from_pretrained
+  pretrained_model_name_or_path: EleutherAI/${model.base_model_name}
+  revision: step${model.checkpoint_number}
+  cache_dir: ${model.cache_dir} # Use the same cache dir
+  use_fast: true
+  local_files_only: true # Set to true if you have the tokenizer cached locally and want to ensure it's used
