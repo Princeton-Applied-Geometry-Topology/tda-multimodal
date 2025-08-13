@@ -1,0 +1,8 @@
+max_output_tokens: 5
+device: 'cuda'
+torch_dtype: 'auto'
+task_name: ${dataset.task_name}
+max_input_tokens: ${dataset.max_tokens}
+output_dir: ${paths.output_dir}
+ablate_heads: false
+n_ablate_heads: 10

@@ -1,0 +1,18 @@
+task_name: inference
+seed: 1248
+n_threads: 4
+use_gpu: True
+save_interval: 10
+defaults:
+  - _self_
+  - model: default
+  - dataset: default
+  - paths: default
+  - metrics: default
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled
+
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .

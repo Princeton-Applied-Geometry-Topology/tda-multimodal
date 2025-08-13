@@ -1,0 +1,12 @@
+defaults:
+  - default
+
+_target_: model.qwen.Qwen # Target the new Qwen class
+model_name: 'qwen-7b' # Specific model name for config/logging
+weights_path: 'Qwen/Qwen2.5-7B' # HF path for Qwen 2.5 7B
+tokenizer:
+  _target_: transformers.AutoTokenizer.from_pretrained
+  pretrained_model_name_or_path: Qwen/Qwen2.5-7B # Use the same path for tokenizer
+  use_fast: true
+  local_files_only: true # Keep true if you have local files, set false to download
+  trust_remote_code: true # Qwen models often require this

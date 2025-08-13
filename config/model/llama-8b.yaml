@@ -1,0 +1,13 @@
+defaults:
+  - default
+
+_target_: model.llama.Llama
+model_name: 'llama-8b'
+output_dir: 'outputs'
+weights_path: 'meta-llama/Llama-3.1-8B'
+tokenizer:
+  _target_: transformers.AutoTokenizer.from_pretrained
+  pretrained_model_name_or_path: meta-llama/Llama-3.1-8B
+  use_fast: true
+  local_files_only: true
+  trust_remote_code: true

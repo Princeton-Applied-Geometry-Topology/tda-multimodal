@@ -1,0 +1,11 @@
+# path to root directory
+root_dir: ${oc.env:PROJECT_ROOT} 
+
+# path to output directory
+output_dir: ${paths.root_dir}/output
+
+# path to save analysis results
+results_dir: ${paths.root_dir}/results
+
+# path to working directory
+work_dir: ${hydra:runtime.cwd}

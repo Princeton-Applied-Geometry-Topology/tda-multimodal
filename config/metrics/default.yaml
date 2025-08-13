@@ -1,0 +1,7 @@
+defaults:
+  - fixed_window_ed@metrics.fixed_window_ed
+  - fixed_window_id@metrics.fixed_window_id
+  - full_sequence_ed@metrics.full_sequence_ed
+  - full_sequence_id@metrics.full_sequence_id
+  - accuracy@metrics.accuracy
+  - _self_

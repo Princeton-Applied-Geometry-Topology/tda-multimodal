@@ -1,0 +1,3 @@
+n_windows: 4
+enabled: true
+metric_name: fixed_window_ed

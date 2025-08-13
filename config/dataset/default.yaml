@@ -1,0 +1,6 @@
+batch_size: 8
+layer_name: null  # set to null to process all layers
+seq_len: 1000
+n_seqs: 500
+max_tokens: 1024
+shuffle: False
