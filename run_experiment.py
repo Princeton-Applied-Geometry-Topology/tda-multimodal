@@ -89,6 +89,13 @@ TASK_CONFIGS = {
         "data_root": "/scratch/gpfs/nb0564/tda-multimodal/datasets/ConMe",
         "csv_path": "replace-att-human.csv",
         "use_images": True,
+    },
+    "sugarcrepepp": {
+        "dataset_name": "sugarcrepe-plus-plus",
+        "task_name": "sugarcrepepp_all_conditions",
+        "data_root": "/scratch/gpfs/nb0564/tda-multimodal/datasets/SUGARCREPEpp",
+        "csv_path": "triplets.csv",
+        "use_images": True,
     }
 }
 

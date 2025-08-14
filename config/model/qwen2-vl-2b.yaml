@@ -4,13 +4,14 @@ defaults:
 _target_: models.qwen_vl_wrapper.QwenVL
 model_name: 'qwen2-vl-2b'
 weights_path: 'Qwen/Qwen2-VL-2B-Instruct'
+local_files_only: false
 
 # Use AutoProcessor for VLM
 processor:
   _target_: transformers.AutoProcessor.from_pretrained
   pretrained_model_name_or_path: Qwen/Qwen2-VL-2B-Instruct
   trust_remote_code: true
-  local_files_only: true
+  local_files_only: false
 
 # Tokenizer is still required by the base LLM interface for decoding
 # We reuse the same model path; decoding uses tokenizer part of the processor
@@ -19,5 +20,5 @@ tokenizer:
   _target_: transformers.AutoTokenizer.from_pretrained
   pretrained_model_name_or_path: Qwen/Qwen2-VL-2B-Instruct
   trust_remote_code: true
-  local_files_only: true
+  local_files_only: false
   use_fast: true 

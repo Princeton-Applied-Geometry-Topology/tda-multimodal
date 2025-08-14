@@ -1,0 +1,37 @@
+defaults:
+  - default
+
+_target_: dataset.sugarcrepe.SugarCrepePlusPlusDataset
+
+dataset_name: sugarcrepe_plus_plus
+task_name: sugarcrepepp_all_conditions
+
+data_root: /scratch/gpfs/nb0564/tda-multimodal/datasets/SUGARCREPEpp
+csv_path: null
+coco_images_dir: /scratch/gpfs/nb0564/tda-multimodal/datasets/COCO/coco-2017/validation/data
+
+tokenizer: ${model.tokenizer}
+
+use_images: true
+id_field: id
+image_field: image_id
+pos1_field: pos1
+pos2_field: pos2
+neg_field: neg
+neg_type_field: neg_type
+
+# Use HF dataset by default
+auth_token: null
+use_hf: true
+hf_repo_id: Aman-J/SugarCrepe_pp
+hf_subsets: [replace_attribute, replace_object, replace_relation]
+hf_split: test
+hf_cache_dir: null
+
+prompt_template: "Question: Which caption correctly describes the image?\nOptions: A) {positive} B) {negative}\nAnswer:"
+
+batch_size: 8
+seq_len: 256
+n_seqs: null
+max_tokens: 512
+shuffle: False 

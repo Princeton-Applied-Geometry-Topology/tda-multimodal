@@ -1,0 +1,35 @@
+defaults:
+  - default
+
+_target_: dataset.sugarcrepe.SugarCrepePlusPlusDataset
+
+# Naming
+dataset_name: sugarcrepe_plus_plus
+task_name: sugarcrepepp_all_conditions
+
+# Paths
+data_root: /scratch/gpfs/nb0564/tda-multimodal/datasets/SUGARCREPEpp
+csv_path: ${dataset.data_root}/triplets.csv
+coco_images_dir: /scratch/gpfs/nb0564/tda-multimodal/datasets/COCO/coco-2017/validation/data
+
+# Tokenizer reference
+tokenizer: ${model.tokenizer}
+
+# Loader behavior
+use_images: true
+id_field: id
+image_field: image_id
+pos1_field: pos1
+pos2_field: pos2
+neg_field: neg
+neg_type_field: neg_type
+
+# Prompt template
+prompt_template: "Question: Which caption correctly describes the image?\nOptions: A) {positive} B) {negative}\nAnswer:"
+
+# Runtime
+batch_size: 8
+seq_len: 256
+n_seqs: null
+max_tokens: 512
+shuffle: False 
