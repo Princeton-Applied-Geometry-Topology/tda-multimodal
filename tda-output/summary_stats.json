@@ -1,0 +1,404 @@
+[
+  {
+    "layer": 0,
+    "n_h1_features": 2,
+    "max_h1_persistence": 0.0012768805027008057,
+    "all_h1_persistence_values": [
+      0.00080108642578125,
+      0.0012768805027008057
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 24.332401275634766
+  },
+  {
+    "layer": 1,
+    "n_h1_features": 3,
+    "max_h1_persistence": 0.6571922302246094,
+    "all_h1_persistence_values": [
+      0.6571922302246094,
+      0.06212353706359863,
+      0.01855248212814331
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 25.19504165649414
+  },
+  {
+    "layer": 2,
+    "n_h1_features": 4,
+    "max_h1_persistence": 0.0752304196357727,
+    "all_h1_persistence_values": [
+      0.023119866847991943,
+      0.0752304196357727,
+      0.008389294147491455,
+      0.025568902492523193
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 22.791818618774414
+  },
+  {
+    "layer": 3,
+    "n_h1_features": 3,
+    "max_h1_persistence": 0.1434604823589325,
+    "all_h1_persistence_values": [
+      0.025041580200195312,
+      0.04769673943519592,
+      0.1434604823589325
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 18.43936538696289
+  },
+  {
+    "layer": 4,
+    "n_h1_features": 2,
+    "max_h1_persistence": 0.0375649631023407,
+    "all_h1_persistence_values": [
+      0.006184428930282593,
+      0.0375649631023407
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 21.90148162841797
+  },
+  {
+    "layer": 5,
+    "n_h1_features": 7,
+    "max_h1_persistence": 4.563760757446289,
+    "all_h1_persistence_values": [
+      1.2995967864990234,
+      4.563760757446289,
+      0.03778165578842163,
+      0.061271339654922485,
+      0.005592405796051025,
+      0.05376923084259033,
+      0.0732564628124237
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 24.496339797973633
+  },
+  {
+    "layer": 6,
+    "n_h1_features": 3,
+    "max_h1_persistence": 0.06276077032089233,
+    "all_h1_persistence_values": [
+      0.06276077032089233,
+      0.04041433334350586,
+      0.06009316444396973
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 19.64541244506836
+  },
+  {
+    "layer": 7,
+    "n_h1_features": 5,
+    "max_h1_persistence": 0.5789394378662109,
+    "all_h1_persistence_values": [
+      0.5789394378662109,
+      0.025245487689971924,
+      0.06669914722442627,
+      0.050944775342941284,
+      0.10650590062141418
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 17.395200729370117
+  },
+  {
+    "layer": 8,
+    "n_h1_features": 2,
+    "max_h1_persistence": 0.02726989984512329,
+    "all_h1_persistence_values": [
+      0.022689998149871826,
+      0.02726989984512329
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 19.36206817626953
+  },
+  {
+    "layer": 9,
+    "n_h1_features": 8,
+    "max_h1_persistence": 3.457927703857422,
+    "all_h1_persistence_values": [
+      3.457927703857422,
+      0.033069610595703125,
+      0.0026572346687316895,
+      0.05554860830307007,
+      0.052515387535095215,
+      0.03275948762893677,
+      0.07990938425064087,
+      0.06747269630432129
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 25.486469268798828
+  },
+  {
+    "layer": 10,
+    "n_h1_features": 3,
+    "max_h1_persistence": 0.08585768938064575,
+    "all_h1_persistence_values": [
+      0.006803780794143677,
+      0.08585768938064575,
+      0.01608341932296753
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 22.301231384277344
+  },
+  {
+    "layer": 11,
+    "n_h1_features": 3,
+    "max_h1_persistence": 0.04678356647491455,
+    "all_h1_persistence_values": [
+      0.014840304851531982,
+      0.037490636110305786,
+      0.04678356647491455
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 25.45762825012207
+  },
+  {
+    "layer": 12,
+    "n_h1_features": 1,
+    "max_h1_persistence": 0.01856517791748047,
+    "all_h1_persistence_values": [
+      0.01856517791748047
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 17.550540924072266
+  },
+  {
+    "layer": 13,
+    "n_h1_features": 0,
+    "max_h1_persistence": 0.0,
+    "all_h1_persistence_values": [],
+    "n_h0_features": 1,
+    "max_h0_persistence": 27.482236862182617
+  },
+  {
+    "layer": 14,
+    "n_h1_features": 4,
+    "max_h1_persistence": 0.0804527997970581,
+    "all_h1_persistence_values": [
+      0.0734902024269104,
+      0.04378810524940491,
+      0.026013940572738647,
+      0.0804527997970581
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 19.000869750976562
+  },
+  {
+    "layer": 15,
+    "n_h1_features": 2,
+    "max_h1_persistence": 0.0483647882938385,
+    "all_h1_persistence_values": [
+      0.0483647882938385,
+      0.023719817399978638
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 24.804384231567383
+  },
+  {
+    "layer": 16,
+    "n_h1_features": 5,
+    "max_h1_persistence": 0.14684894680976868,
+    "all_h1_persistence_values": [
+      0.14684894680976868,
+      0.04897436499595642,
+      0.06886664032936096,
+      0.004121690988540649,
+      0.09777405858039856
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 23.348072052001953
+  },
+  {
+    "layer": 17,
+    "n_h1_features": 5,
+    "max_h1_persistence": 0.14222770929336548,
+    "all_h1_persistence_values": [
+      0.027248799800872803,
+      0.03699779510498047,
+      0.09570789337158203,
+      0.14222770929336548,
+      0.02995598316192627
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 24.295207977294922
+  },
+  {
+    "layer": 18,
+    "n_h1_features": 3,
+    "max_h1_persistence": 0.10309737920761108,
+    "all_h1_persistence_values": [
+      0.08231371641159058,
+      0.10309737920761108,
+      0.02263951301574707
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 17.08464241027832
+  },
+  {
+    "layer": 19,
+    "n_h1_features": 6,
+    "max_h1_persistence": 0.8860664367675781,
+    "all_h1_persistence_values": [
+      0.8860664367675781,
+      0.026984453201293945,
+      0.01234745979309082,
+      0.07321298122406006,
+      0.03367197513580322,
+      0.04498124122619629
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 22.85529327392578
+  },
+  {
+    "layer": 20,
+    "n_h1_features": 3,
+    "max_h1_persistence": 1.8394432067871094,
+    "all_h1_persistence_values": [
+      1.8394432067871094,
+      0.051723092794418335,
+      0.08234959840774536
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 18.116804122924805
+  },
+  {
+    "layer": 21,
+    "n_h1_features": 4,
+    "max_h1_persistence": 4.169855117797852,
+    "all_h1_persistence_values": [
+      4.169855117797852,
+      0.08519551157951355,
+      0.003710508346557617,
+      0.02510806918144226
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 19.580013275146484
+  },
+  {
+    "layer": 22,
+    "n_h1_features": 3,
+    "max_h1_persistence": 0.07477807998657227,
+    "all_h1_persistence_values": [
+      0.018805503845214844,
+      0.0195828378200531,
+      0.07477807998657227
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 12.185423851013184
+  },
+  {
+    "layer": 23,
+    "n_h1_features": 3,
+    "max_h1_persistence": 0.4533805847167969,
+    "all_h1_persistence_values": [
+      0.4533805847167969,
+      0.057059526443481445,
+      0.021882086992263794
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 17.68375015258789
+  },
+  {
+    "layer": 24,
+    "n_h1_features": 3,
+    "max_h1_persistence": 0.09637907147407532,
+    "all_h1_persistence_values": [
+      0.09637907147407532,
+      0.078066885471344,
+      0.0918160080909729
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 24.168073654174805
+  },
+  {
+    "layer": 25,
+    "n_h1_features": 4,
+    "max_h1_persistence": 7.664960861206055,
+    "all_h1_persistence_values": [
+      7.664960861206055,
+      0.0643179714679718,
+      0.021165907382965088,
+      0.08986106514930725
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 21.84935188293457
+  },
+  {
+    "layer": 26,
+    "n_h1_features": 2,
+    "max_h1_persistence": 0.017035603523254395,
+    "all_h1_persistence_values": [
+      0.017035603523254395,
+      0.01651090383529663
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 21.429224014282227
+  },
+  {
+    "layer": 27,
+    "n_h1_features": 3,
+    "max_h1_persistence": 0.06350347399711609,
+    "all_h1_persistence_values": [
+      0.0001703798770904541,
+      0.06350347399711609,
+      0.033834874629974365
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 19.618059158325195
+  },
+  {
+    "layer": 28,
+    "n_h1_features": 6,
+    "max_h1_persistence": 0.04828000068664551,
+    "all_h1_persistence_values": [
+      0.022104263305664062,
+      0.0036818385124206543,
+      0.04828000068664551,
+      0.033035218715667725,
+      0.034211963415145874,
+      0.01900622248649597
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 21.633176803588867
+  },
+  {
+    "layer": 29,
+    "n_h1_features": 4,
+    "max_h1_persistence": 1.8848419189453125,
+    "all_h1_persistence_values": [
+      1.8848419189453125,
+      0.03922364115715027,
+      0.013923227787017822,
+      0.03376811742782593
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 24.194786071777344
+  },
+  {
+    "layer": 30,
+    "n_h1_features": 5,
+    "max_h1_persistence": 0.1014060378074646,
+    "all_h1_persistence_values": [
+      0.00030541419982910156,
+      0.03909766674041748,
+      0.1014060378074646,
+      0.009376168251037598,
+      0.0671393871307373
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 15.895844459533691
+  },
+  {
+    "layer": 31,
+    "n_h1_features": 4,
+    "max_h1_persistence": 0.05251815915107727,
+    "all_h1_persistence_values": [
+      0.013255596160888672,
+      0.03684288263320923,
+      0.05251815915107727,
+      0.005134135484695435
+    ],
+    "n_h0_features": 1,
+    "max_h0_persistence": 16.792951583862305
+  }
+]

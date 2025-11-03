@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+(tda)/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# === DATA ===
+# Ignore all large data files
+data/physics_experiment_6x6/all_activations.pt
+data/physics_experiment_6x6/images/
+
+# === MODEL ===
+# Ignore the local model download
+qwen-vl-chat-local/
+
+# === RESULTS ===
+# Ignore the 3D point cloud files, they are just data
+tda_debug_output/point_clouds_3d/

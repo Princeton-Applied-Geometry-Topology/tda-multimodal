@@ -1,0 +1,386 @@
+[
+  {
+    "id": "red_cube",
+    "image_path": "data/physics_experiment_6x6/images/red_cube.png",
+    "prompt": "a photo of a red cube",
+    "type": "bound",
+    "color": "red",
+    "shape": "cube"
+  },
+  {
+    "id": "red_sphere",
+    "image_path": "data/physics_experiment_6x6/images/red_sphere.png",
+    "prompt": "a photo of a red sphere",
+    "type": "bound",
+    "color": "red",
+    "shape": "sphere"
+  },
+  {
+    "id": "red_pyramid",
+    "image_path": "data/physics_experiment_6x6/images/red_pyramid.png",
+    "prompt": "a photo of a red pyramid",
+    "type": "bound",
+    "color": "red",
+    "shape": "pyramid"
+  },
+  {
+    "id": "red_cone",
+    "image_path": "data/physics_experiment_6x6/images/red_cone.png",
+    "prompt": "a photo of a red cone",
+    "type": "bound",
+    "color": "red",
+    "shape": "cone"
+  },
+  {
+    "id": "red_torus",
+    "image_path": "data/physics_experiment_6x6/images/red_torus.png",
+    "prompt": "a photo of a red torus",
+    "type": "bound",
+    "color": "red",
+    "shape": "torus"
+  },
+  {
+    "id": "red_cylinder",
+    "image_path": "data/physics_experiment_6x6/images/red_cylinder.png",
+    "prompt": "a photo of a red cylinder",
+    "type": "bound",
+    "color": "red",
+    "shape": "cylinder"
+  },
+  {
+    "id": "green_cube",
+    "image_path": "data/physics_experiment_6x6/images/green_cube.png",
+    "prompt": "a photo of a green cube",
+    "type": "bound",
+    "color": "green",
+    "shape": "cube"
+  },
+  {
+    "id": "green_sphere",
+    "image_path": "data/physics_experiment_6x6/images/green_sphere.png",
+    "prompt": "a photo of a green sphere",
+    "type": "bound",
+    "color": "green",
+    "shape": "sphere"
+  },
+  {
+    "id": "green_pyramid",
+    "image_path": "data/physics_experiment_6x6/images/green_pyramid.png",
+    "prompt": "a photo of a green pyramid",
+    "type": "bound",
+    "color": "green",
+    "shape": "pyramid"
+  },
+  {
+    "id": "green_cone",
+    "image_path": "data/physics_experiment_6x6/images/green_cone.png",
+    "prompt": "a photo of a green cone",
+    "type": "bound",
+    "color": "green",
+    "shape": "cone"
+  },
+  {
+    "id": "green_torus",
+    "image_path": "data/physics_experiment_6x6/images/green_torus.png",
+    "prompt": "a photo of a green torus",
+    "type": "bound",
+    "color": "green",
+    "shape": "torus"
+  },
+  {
+    "id": "green_cylinder",
+    "image_path": "data/physics_experiment_6x6/images/green_cylinder.png",
+    "prompt": "a photo of a green cylinder",
+    "type": "bound",
+    "color": "green",
+    "shape": "cylinder"
+  },
+  {
+    "id": "blue_cube",
+    "image_path": "data/physics_experiment_6x6/images/blue_cube.png",
+    "prompt": "a photo of a blue cube",
+    "type": "bound",
+    "color": "blue",
+    "shape": "cube"
+  },
+  {
+    "id": "blue_sphere",
+    "image_path": "data/physics_experiment_6x6/images/blue_sphere.png",
+    "prompt": "a photo of a blue sphere",
+    "type": "bound",
+    "color": "blue",
+    "shape": "sphere"
+  },
+  {
+    "id": "blue_pyramid",
+    "image_path": "data/physics_experiment_6x6/images/blue_pyramid.png",
+    "prompt": "a photo of a blue pyramid",
+    "type": "bound",
+    "color": "blue",
+    "shape": "pyramid"
+  },
+  {
+    "id": "blue_cone",
+    "image_path": "data/physics_experiment_6x6/images/blue_cone.png",
+    "prompt": "a photo of a blue cone",
+    "type": "bound",
+    "color": "blue",
+    "shape": "cone"
+  },
+  {
+    "id": "blue_torus",
+    "image_path": "data/physics_experiment_6x6/images/blue_torus.png",
+    "prompt": "a photo of a blue torus",
+    "type": "bound",
+    "color": "blue",
+    "shape": "torus"
+  },
+  {
+    "id": "blue_cylinder",
+    "image_path": "data/physics_experiment_6x6/images/blue_cylinder.png",
+    "prompt": "a photo of a blue cylinder",
+    "type": "bound",
+    "color": "blue",
+    "shape": "cylinder"
+  },
+  {
+    "id": "yellow_cube",
+    "image_path": "data/physics_experiment_6x6/images/yellow_cube.png",
+    "prompt": "a photo of a yellow cube",
+    "type": "bound",
+    "color": "yellow",
+    "shape": "cube"
+  },
+  {
+    "id": "yellow_sphere",
+    "image_path": "data/physics_experiment_6x6/images/yellow_sphere.png",
+    "prompt": "a photo of a yellow sphere",
+    "type": "bound",
+    "color": "yellow",
+    "shape": "sphere"
+  },
+  {
+    "id": "yellow_pyramid",
+    "image_path": "data/physics_experiment_6x6/images/yellow_pyramid.png",
+    "prompt": "a photo of a yellow pyramid",
+    "type": "bound",
+    "color": "yellow",
+    "shape": "pyramid"
+  },
+  {
+    "id": "yellow_cone",
+    "image_path": "data/physics_experiment_6x6/images/yellow_cone.png",
+    "prompt": "a photo of a yellow cone",
+    "type": "bound",
+    "color": "yellow",
+    "shape": "cone"
+  },
+  {
+    "id": "yellow_torus",
+    "image_path": "data/physics_experiment_6x6/images/yellow_torus.png",
+    "prompt": "a photo of a yellow torus",
+    "type": "bound",
+    "color": "yellow",
+    "shape": "torus"
+  },
+  {
+    "id": "yellow_cylinder",
+    "image_path": "data/physics_experiment_6x6/images/yellow_cylinder.png",
+    "prompt": "a photo of a yellow cylinder",
+    "type": "bound",
+    "color": "yellow",
+    "shape": "cylinder"
+  },
+  {
+    "id": "cyan_cube",
+    "image_path": "data/physics_experiment_6x6/images/cyan_cube.png",
+    "prompt": "a photo of a cyan cube",
+    "type": "bound",
+    "color": "cyan",
+    "shape": "cube"
+  },
+  {
+    "id": "cyan_sphere",
+    "image_path": "data/physics_experiment_6x6/images/cyan_sphere.png",
+    "prompt": "a photo of a cyan sphere",
+    "type": "bound",
+    "color": "cyan",
+    "shape": "sphere"
+  },
+  {
+    "id": "cyan_pyramid",
+    "image_path": "data/physics_experiment_6x6/images/cyan_pyramid.png",
+    "prompt": "a photo of a cyan pyramid",
+    "type": "bound",
+    "color": "cyan",
+    "shape": "pyramid"
+  },
+  {
+    "id": "cyan_cone",
+    "image_path": "data/physics_experiment_6x6/images/cyan_cone.png",
+    "prompt": "a photo of a cyan cone",
+    "type": "bound",
+    "color": "cyan",
+    "shape": "cone"
+  },
+  {
+    "id": "cyan_torus",
+    "image_path": "data/physics_experiment_6x6/images/cyan_torus.png",
+    "prompt": "a photo of a cyan torus",
+    "type": "bound",
+    "color": "cyan",
+    "shape": "torus"
+  },
+  {
+    "id": "cyan_cylinder",
+    "image_path": "data/physics_experiment_6x6/images/cyan_cylinder.png",
+    "prompt": "a photo of a cyan cylinder",
+    "type": "bound",
+    "color": "cyan",
+    "shape": "cylinder"
+  },
+  {
+    "id": "magenta_cube",
+    "image_path": "data/physics_experiment_6x6/images/magenta_cube.png",
+    "prompt": "a photo of a magenta cube",
+    "type": "bound",
+    "color": "magenta",
+    "shape": "cube"
+  },
+  {
+    "id": "magenta_sphere",
+    "image_path": "data/physics_experiment_6x6/images/magenta_sphere.png",
+    "prompt": "a photo of a magenta sphere",
+    "type": "bound",
+    "color": "magenta",
+    "shape": "sphere"
+  },
+  {
+    "id": "magenta_pyramid",
+    "image_path": "data/physics_experiment_6x6/images/magenta_pyramid.png",
+    "prompt": "a photo of a magenta pyramid",
+    "type": "bound",
+    "color": "magenta",
+    "shape": "pyramid"
+  },
+  {
+    "id": "magenta_cone",
+    "image_path": "data/physics_experiment_6x6/images/magenta_cone.png",
+    "prompt": "a photo of a magenta cone",
+    "type": "bound",
+    "color": "magenta",
+    "shape": "cone"
+  },
+  {
+    "id": "magenta_torus",
+    "image_path": "data/physics_experiment_6x6/images/magenta_torus.png",
+    "prompt": "a photo of a magenta torus",
+    "type": "bound",
+    "color": "magenta",
+    "shape": "torus"
+  },
+  {
+    "id": "magenta_cylinder",
+    "image_path": "data/physics_experiment_6x6/images/magenta_cylinder.png",
+    "prompt": "a photo of a magenta cylinder",
+    "type": "bound",
+    "color": "magenta",
+    "shape": "cylinder"
+  },
+  {
+    "id": "red_object",
+    "image_path": "data/physics_experiment_6x6/images/red_object.png",
+    "prompt": "a photo of a red object",
+    "type": "color_only",
+    "color": "red",
+    "shape": "unknown"
+  },
+  {
+    "id": "green_object",
+    "image_path": "data/physics_experiment_6x6/images/green_object.png",
+    "prompt": "a photo of a green object",
+    "type": "color_only",
+    "color": "green",
+    "shape": "unknown"
+  },
+  {
+    "id": "blue_object",
+    "image_path": "data/physics_experiment_6x6/images/blue_object.png",
+    "prompt": "a photo of a blue object",
+    "type": "color_only",
+    "color": "blue",
+    "shape": "unknown"
+  },
+  {
+    "id": "yellow_object",
+    "image_path": "data/physics_experiment_6x6/images/yellow_object.png",
+    "prompt": "a photo of a yellow object",
+    "type": "color_only",
+    "color": "yellow",
+    "shape": "unknown"
+  },
+  {
+    "id": "cyan_object",
+    "image_path": "data/physics_experiment_6x6/images/cyan_object.png",
+    "prompt": "a photo of a cyan object",
+    "type": "color_only",
+    "color": "cyan",
+    "shape": "unknown"
+  },
+  {
+    "id": "magenta_object",
+    "image_path": "data/physics_experiment_6x6/images/magenta_object.png",
+    "prompt": "a photo of a magenta object",
+    "type": "color_only",
+    "color": "magenta",
+    "shape": "unknown"
+  },
+  {
+    "id": "grey_cube",
+    "image_path": "data/physics_experiment_6x6/images/grey_cube.png",
+    "prompt": "a photo of a grey cube",
+    "type": "shape_only",
+    "color": "grey",
+    "shape": "cube"
+  },
+  {
+    "id": "grey_sphere",
+    "image_path": "data/physics_experiment_6x6/images/grey_sphere.png",
+    "prompt": "a photo of a grey sphere",
+    "type": "shape_only",
+    "color": "grey",
+    "shape": "sphere"
+  },
+  {
+    "id": "grey_pyramid",
+    "image_path": "data/physics_experiment_6x6/images/grey_pyramid.png",
+    "prompt": "a photo of a grey pyramid",
+    "type": "shape_only",
+    "color": "grey",
+    "shape": "pyramid"
+  },
+  {
+    "id": "grey_cone",
+    "image_path": "data/physics_experiment_6x6/images/grey_cone.png",
+    "prompt": "a photo of a grey cone",
+    "type": "shape_only",
+    "color": "grey",
+    "shape": "cone"
+  },
+  {
+    "id": "grey_torus",
+    "image_path": "data/physics_experiment_6x6/images/grey_torus.png",
+    "prompt": "a photo of a grey torus",
+    "type": "shape_only",
+    "color": "grey",
+    "shape": "torus"
+  },
+  {
+    "id": "grey_cylinder",
+    "image_path": "data/physics_experiment_6x6/images/grey_cylinder.png",
+    "prompt": "a photo of a grey cylinder",
+    "type": "shape_only",
+    "color": "grey",
+    "shape": "cylinder"
+  }
+]
